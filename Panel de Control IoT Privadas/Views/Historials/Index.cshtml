@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Panel_de_Control_IoT_Privadas.Models.Historials>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>HISTORIAL</h2>
+<p>
+    <a href="@Url.Action("Create")">
+        <img src="~/Content/mas.png" alt="Crear" width="25" height="25" />
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Privadas.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumCasa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEpoch)
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Privadas.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumCasa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fechadatetime)
+            </td>
+           
+        </tr>
+     }
+</table>

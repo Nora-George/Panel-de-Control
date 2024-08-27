@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Panel_de_Control_IoT_Privadas.Models.Privadas>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>PRIVADAS</h2>
+<p>
+    <a href="@Url.Action("Create")">
+    <img src="~/Content/mas.png" alt="Crear" width="25" height="25" />
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroSerie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contraseña)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAdministrador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContraseñaAdministrador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServicioCompleto)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroSerie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contraseña)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreAdministrador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContraseñaAdministrador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicioCompleto)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = item.ID })">
+                    <img src="~/Content/editar.png" alt="Editar" width="40" height="40" />
+                </a>
+                <a href="@Url.Action("Details", new { id = item.ID })">
+                    <img src="~/Content/lista.png" alt="Detalles" width="40" height="40" />
+                </a>
+                <a href="@Url.Action("Delete", new { id = item.ID })">
+                    <img src="~/Content/borrar.png" alt="Eliminar" width="40" height="40" />
+                </a>
+                <a href="@Url.Action("Houses", new { id = item.ID })">
+                    <img src="~/Content/house.png" alt="Casas" width="40" height="40" />
+                </a>
+                <a href="@Url.Action("Historials", new { id = item.ID })">
+                    <img src="~/Content/history.png" alt="Historial" width="40" height="40" />
+                </a>
+            </td>
+        </tr>
+     }
+</table>

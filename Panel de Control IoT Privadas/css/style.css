@@ -1,0 +1,96 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FCFCFC;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #FCFCFC;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background: #bdf3f3;
+    }
+}
+
+.navbar {
+    width: 250px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    background: #cab1ea;
+    color: #000;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.render-content {
+    margin-left: 290px;
+}
+
+
+.vinculo {
+    width: 210px;
+    height: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+.vinculo:hover {
+    background: #E0E0E0;
+}
+
+.fa-door-open {
+    color: #E86C67;
+}
+
+.fa-house {
+    color: #67E888;
+}
+
+.fa-users {
+    color: #67C0E8;
+}
+
+.fa-book {
+    color: #9F67E8;
+}
+
+span {
+    width: 20px;
+    height: 20px;
+}

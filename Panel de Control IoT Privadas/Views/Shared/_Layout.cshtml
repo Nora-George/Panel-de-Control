@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/a3c9717c3d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top navbar">
+        <div class="space"></div>
+        <div class="navbar-header content">
+            <a class="vinculo" href="@Url.Action("Index", "Privadas")">
+                <span>
+                    <i class="fa-solid fa-door-open"></i>
+                </span>
+                <p>Privadas</p>
+            </a>    
+        </div>
+        <div>
+            <a href="@Url.Action("CerrarSesion", "Administradors")" class="vinculo">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <p>Cerrar Sesión</p>
+            </a>
+        </div>
+    </div>
+    <div class="render-content">
+        @RenderBody()
+    </div>
+    <div class="container body-content">
+        <hr />
+        <style>
+            footer {
+                margin-top: 550px; /* Puedes ajustar el valor según sea necesario */
+            }
+        </style>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - HALL TECHNOLOGY</p>
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

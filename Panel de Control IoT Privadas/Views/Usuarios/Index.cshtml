@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Panel_de_Control_IoT_Privadas.Models.Usuarios>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>USUARIOS</h2>
+
+<p>
+    <a href="@Url.Action("Create")">
+        <img src="~/Content/mas.png" alt="Crear" width="25" height="25" />
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Casas.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Casas.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estatus)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", new { id = item.ID })">
+                <img src="~/Content/editar.png" alt="Editar" width="40" height="40" />
+            </a>
+            <a href="@Url.Action("Details", new { id = item.ID })">
+                <img src="~/Content/lista.png" alt="Detalles" width="40" height="40" />
+            </a>
+            <a href="@Url.Action("Delete", new { id = item.ID })">
+                <img src="~/Content/borrar.png" alt="Eliminar" width="40" height="40" />
+            </a>
+        </td>
+    </tr>
+}
+
+</table>

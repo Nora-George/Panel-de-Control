@@ -1,0 +1,69 @@
+﻿@model Panel_de_Control_IoT_Privadas.Models.Historials
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estás seguro de que quieres eliminar esto?</h3>
+<div>
+    <h4>Historials</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Privadas.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Privadas.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumCasa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumCasa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEpoch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEpoch)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <button type="submit" class="btn btn-default">
+        <img src="~/Content/borrar.png" alt="Eliminar" width="25" height="25" />
+    </button>
+    <a href="@Url.Action("Index")">
+        <img src="~/Content/atras.png" alt="Regresar" width="25" height="25" />
+    </a>
+</div>
+    }
+</div>

@@ -1,0 +1,79 @@
+﻿@model Panel_de_Control_IoT_Privadas.Models.Privadas
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Privadas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroSerie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroSerie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contraseña)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contraseña)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreAdministrador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreAdministrador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContraseñaAdministrador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContraseñaAdministrador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServicioCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServicioCompleto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Edit", new { id = Model.ID })">
+        <img src="~/Content/editar.png" alt="Editar" width="25" height="25" />
+    </a>|
+    <a href="@Url.Action("Index")">
+        <img src="~/Content/atras.png" alt="Regresar" width="25" height="25" />
+    </a>
+</p>

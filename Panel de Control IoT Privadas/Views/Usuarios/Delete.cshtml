@@ -1,0 +1,53 @@
+﻿@model Panel_de_Control_IoT_Privadas.Models.Usuarios
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>¿Estás seguro de que quieres eliminar esto?</h3>
+<div>
+    <h4>Usuarios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Casas.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Casas.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button type="submit" class="btn btn-default">
+                <img src="~/Content/borrar.png" alt="Eliminar" width="25" height="25" />
+            </button>
+            <a href="@Url.Action("Index")">
+                <img src="~/Content/atras.png" alt="Regresar" width="25" height="25" />
+            </a>
+        </div>
+    }
+</div>
